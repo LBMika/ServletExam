@@ -30,5 +30,7 @@
 	}
 %>
 </ul>
+<br>
+<h3><a href="<%=request.getContextPath() %>/accueil.jsp">Retour</a></h3>
 </body>
 </html>

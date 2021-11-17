@@ -6,10 +6,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Formations</title>
+<title>Elèves</title>
 </head>
 <body>
-<h1>Les formations</h1>
+<h1>Les élèves</h1>
 
 </br>
 <ul>
@@ -30,5 +30,7 @@
 	}
 %>
 </ul>
+<br>
+<h3><a href="<%=request.getContextPath() %>/accueil.jsp">Retour</a></h3>
 </body>
 </html>

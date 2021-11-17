@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Formations</title>
+<title>Formation</title>
 </head>
 <body>
 <h1>Détails d'une formation</h1>
@@ -30,5 +30,8 @@
 <h3>Programme : <%= formation.getProgramme() %></h3>
 <h3>Nombre d'inscrits : <%= formation.getInscrit() %></h3>
 </ul>
+
+<br>
+<h3><a href="<%=request.getContextPath() %>/formations">Retour</a></h3>
 </body>
 </html>
