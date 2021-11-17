@@ -17,11 +17,11 @@ import jakarta.servlet.http.HttpServletResponse;
  * Servlet implementation class FormationServlet
  */
 @WebServlet("/eleves")
-public class EleveServlet extends HttpServlet {
+public class ElevesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private List<User> users;
 
-    public EleveServlet() {
+    public ElevesServlet() {
        users = UserService.getInstance().getUsers();
     }
 

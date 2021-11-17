@@ -15,11 +15,11 @@ import jakarta.servlet.http.HttpServletResponse;
  * Servlet implementation class FormationServlet
  */
 @WebServlet("/formations")
-public class FormationServlet extends HttpServlet {
+public class FormationsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private List<Formation> formations;
 
-    public FormationServlet() {
+    public FormationsServlet() {
        formations = FormationService.getInstance().getFormations();
     }
 
