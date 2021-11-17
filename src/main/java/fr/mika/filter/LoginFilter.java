@@ -37,23 +37,18 @@ public class LoginFilter implements Filter{
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 
-		System.out.println("Je suis là Login Filter");
 		
 		// Already connected
 		if (user!=null) {
-			System.out.println("Login Filter session en cours");
 			chain.doFilter(req, res);
 			return;
 		}
-		System.out.println("Login Filter pas de session");
 		
 		
 		// Checking connexion
 		String username =  req.getParameter("username");
 		String pwd =  req.getParameter("pwd");
 
-		System.out.println(username);
-		System.out.println(pwd);
 		
 		List<User> users = UserService.getInstance().getUsers();
 		user = users.stream()

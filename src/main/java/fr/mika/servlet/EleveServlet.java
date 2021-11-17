@@ -38,7 +38,6 @@ public class EleveServlet extends HttpServlet {
     		return;
     	}
     	
-    	System.out.println("!!!!! "+user);
     	request.setAttribute("eleve", user);
 		request.getRequestDispatcher("eleve.jsp").forward(request, response);
 	}
