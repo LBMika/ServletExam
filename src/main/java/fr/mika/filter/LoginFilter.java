@@ -63,6 +63,7 @@ public class LoginFilter implements Filter{
 		// Bad username or password
 		if (user==null) {
 			HttpServletResponse response = (HttpServletResponse) res;
+			session.setAttribute("invalide", "oui");
 			response.sendRedirect(request.getContextPath()+"/connexion.jsp");
 			return;
 		}

@@ -9,7 +9,11 @@
 <body>
 <h1>Connexion</h1>
 <br>
-
+<%
+	String invalid = (String) request.getSession().getAttribute("invalide");
+%>
+<p style="color:red;"> <%= (invalid!=null?"Pseudo ou mot de passe invalide !!":"") %>
+</p>
 <form action = "<%=request.getContextPath() %>/accueil.jsp" method = "POST">
 	Username : <input type = "text" name = "username">
 	</br>
