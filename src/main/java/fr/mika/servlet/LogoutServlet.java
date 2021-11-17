@@ -31,7 +31,8 @@ public class LogoutServlet extends HttpServlet {
 		User user = (User) session.getAttribute("user");
 
 		if (user!=null) session.removeAttribute("user");
-		request.getRequestDispatcher("/connexion.jsp").forward(request, response);
+		// request.getRequestDispatcher("/connexion.jsp").forward(request, response);
+		response.sendRedirect(request.getContextPath()+"/connexion.jsp");
 	}
 
     @Override
