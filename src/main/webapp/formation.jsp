@@ -24,6 +24,6 @@
 </ul>
 
 <br>
-<h3><a href="<%=request.getContextPath() %>/accueil.jsp">Retour</a></h3>
+<h3><a href="<%=request.getContextPath() %>/formations">Retour</a></h3>
 </body>
 </html>
