@@ -6,6 +6,8 @@ public class User {
 	private String pwd;
 	private String username;
 	private int age;
+	private int note;
+	private Formation formation;
 	
 	
 	public User(String nom, String prenom, String username, String pwd, int age) {
@@ -15,6 +17,26 @@ public class User {
 		this.username = username;
 		this.pwd = pwd;
 		this.age = age;
+	}
+
+
+	public Formation getFormation() {
+		return formation;
+	}
+
+
+	public void setFormation(Formation formation) {
+		this.formation = formation;
+	}
+
+
+	public int getNote() {
+		return note;
+	}
+
+
+	public void setNote(int note) {
+		this.note = note;
 	}
 
 
