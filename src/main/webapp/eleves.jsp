@@ -21,7 +21,7 @@
 %>
 	<li>
 		<h3>
-			<a href="<%= request.getContextPath() %>/eleve.jsp?nom=<%= u.getNom() %>&prenom=<%= u.getPrenom() %>">
+			<a href="<%= request.getContextPath() %>/eleve?nom=<%= u.getNom() %>&prenom=<%= u.getPrenom() %>">
 			<%= nom %>
 			</a>
 		</h3>

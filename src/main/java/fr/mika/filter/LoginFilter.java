@@ -70,8 +70,6 @@ public class LoginFilter implements Filter{
 		// Setting up session
 		session.setAttribute("user", user);
 		
-		System.out.println(">>>>>>>>>> "+user);
-		
 		chain.doFilter(req, res);
 	}
 	

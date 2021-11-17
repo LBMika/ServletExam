@@ -15,12 +15,7 @@
 </br>
 <ul>
 <%
-	List<User> users = UserService.getInstance().getUsers();
-	String nom = request.getParameter("nom");
-	String prenom = request.getParameter("prenom");
-	User user = users.stream()
-				.filter(u -> u.getNom().equals(nom) && u.getPrenom().equals(prenom))
-				.findFirst().orElse(null);
+	User user = (User) request.getAttribute("eleve");
 
 %>
 <h3>Nom : <%= user.getNom() %></h3>
@@ -30,6 +25,6 @@
 <h3>Note : <%= user.getNote() %></h3>
 </ul>
 <br>
-<h3><a href="<%=request.getContextPath() %>/eleves">Retour</a></h3>
+<h3><a href="<%=request.getContextPath() %>/accueil.jsp">Retour</a></h3>
 </body>
 </html>
