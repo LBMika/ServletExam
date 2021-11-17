@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Connexion</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Connexion</h1>
@@ -12,7 +13,7 @@
 <%
 	String invalid = (String) request.getSession().getAttribute("invalide");
 %>
-<p style="color:red;"> <%= (invalid!=null?"Pseudo ou mot de passe invalide !!":"") %>
+<p class="login_error"> <%= (invalid!=null?"Pseudo ou mot de passe invalide !!":"") %>
 </p>
 <form action = "<%=request.getContextPath() %>/accueil.jsp" method = "POST">
 	Username : <input type = "text" name = "username">
