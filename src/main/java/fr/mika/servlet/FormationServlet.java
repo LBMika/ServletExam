@@ -29,9 +29,7 @@ public class FormationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
     	String sujet = request.getParameter("sujet");
-    	Formation formation = formations.stream()
-    						.filter(f -> f.getSujet().equals(sujet))
-    						.findFirst().orElse(null);
+    	Formation formation = FormationService.getInstance().getFormationBySubject(sujet);
     	if (formation==null) {
     		response.sendRedirect("/formations");
     		return;

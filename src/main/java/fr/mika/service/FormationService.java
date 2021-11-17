@@ -35,4 +35,12 @@ public class FormationService {
 	public List<Formation> getFormations() {
 		return formations;
 	}
+	
+	public Formation getFormationBySubject(String sujet)
+	{
+    	Formation formation = formations.stream()
+					.filter(f -> f.getSujet().equals(sujet))
+					.findFirst().orElse(null);
+    	return formation;
+	}
 }

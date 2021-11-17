@@ -30,9 +30,7 @@ public class EleveServlet extends HttpServlet {
 		
     	String nom = request.getParameter("nom");
     	String prenom = request.getParameter("prenom");
-    	User user = users.stream()
-    				.filter(u -> u.getNom().equals(nom) && u.getPrenom().equals(prenom))
-    				.findFirst().orElse(null);
+    	User user = UserService.getInstance().getUserByName(nom, prenom);
     	if (user==null) {
     		response.sendRedirect("/eleves");
     		return;

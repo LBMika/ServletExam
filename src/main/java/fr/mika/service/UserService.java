@@ -48,4 +48,12 @@ public class UserService {
 	public List<User> getUsers() {
 		return users;
 	}
+	
+	
+	public User getUserByName (String nom, String prenom ) {
+		User user = users.stream()
+					.filter(u -> u.getNom().equals(nom) && u.getPrenom().equals(prenom))
+					.findFirst().orElse(null);
+		return user;
+	}
 }
