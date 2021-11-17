@@ -15,16 +15,8 @@
 </br>
 <ul>
 <%
-	String sujet = request.getParameter("sujet");
-	Formation formation = null;
 	
-	for (Formation f : FormationService.getInstance().getFormations()) {
-		if (f.getSujet().equals(sujet)) {
-			formation = f;
-			break;
-		}
-	}
-
+	Formation formation = (Formation) request.getAttribute("formation");
 %>
 <h3>Sujet : <%= formation.getSujet() %></h3>
 <h3>Programme : <%= formation.getProgramme() %></h3>

@@ -21,7 +21,7 @@
 %>
 	<li>
 		<h3>
-			<a href="<%= request.getContextPath() %>/formation.jsp?sujet=<%= sujet %>">
+			<a href="<%= request.getContextPath() %>/formation?sujet=<%= sujet %>">
 			<%= sujet %>
 			</a>
 		</h3>
